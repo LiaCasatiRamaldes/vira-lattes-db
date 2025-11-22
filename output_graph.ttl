@@ -1,0 +1,154 @@
+@prefix : <http://vira-lattes.com/> .
+@prefix banca: <http://vira-lattes.com/banca/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pesquisador: <http://vira-lattes.com/pesquisador/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <https://schema.org/> .
+
+<http://vira-lattes.com> a owl:Ontology .
+
+:Pesquisador a owl:Class .
+
+banca:103 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:104 a :Banca ;
+    :ano_1 "2021" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:105 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:110 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:111 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:112 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:113 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:114 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:115 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:116 a :Banca ;
+    :ano_1 "2022" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:131 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:132 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:133 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:139 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:140 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:141 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:142 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:143 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:144 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:145 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:146 a :Banca ;
+    :ano_1 "2023" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+banca:61 a :Banca ;
+    :ano_1 "2021" ;
+    :idioma "Português"@pt ;
+    :natureza "Graduação"@pt ;
+    :partOf pesquisador:2469487264010076 .
+
+:pesquisador_role rdf:Property owl:Class .
+
+:Banca a owl:Class .
+
+pesquisador:2469487264010076 a owl:NamedIndividual ;
+    :atualizacao "2024-01-05" ;
+    :id_lattes "2469487264010076" ;
+    :nacionalidade "França"@pt ;
+    :role "Avaliador"@pt ;
+    schema:name "Jean-Rémi Bourguet"@pt .
+
