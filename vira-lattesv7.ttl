@@ -1,0 +1,169 @@
+@prefix : <http://vira-lattes.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://vira-lattes.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:Pesquisador rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Pesquisador"@en.
+:Banca rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Banca"@en.
+:Monografia rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Monografia"@en.
+:Instituicao rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Instituicao"@en.
+:Avaliacao rdf:type owl:Class, gufo:EventType, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Event;
+    rdfs:label "Avaliacao"@en.
+:Ata rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:label "Ata"@en.
+:Curso rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Curso"@en.
+:IniciacaoCientifica rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Iniciacao cientifica"@en.
+:Publicacao rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Publicacao"@en.
+:Avaliador rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Avaliador"@en.
+:Orientando rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Orientando"@en.
+:Orientador rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Orientador"@en;
+    rdfs:subClassOf :Pesquisador.
+:IniciacaoCientifica rdfs:subClassOf :Publicacao.
+:Monografia rdfs:subClassOf :Publicacao.
+:Avaliador rdfs:subClassOf :Pesquisador.
+:Orientando rdfs:subClassOf :Pesquisador.
+:nacionalidade rdfs:domain :Pesquisador;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "nacionalidade"@en.
+:nome_pesquisador rdfs:domain :Pesquisador;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "nome_pesquisador"@en.
+:id_lattes rdfs:domain :Pesquisador;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id_lattes"@en.
+:data_atualizacao rdfs:domain :Pesquisador;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "data_atualizacao"@en.
+:id_banca rdfs:domain :Banca;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id_banca"@en.
+:ano_banca rdfs:domain :Banca;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "ano_banca"@en.
+:id_instituicao rdfs:domain :Instituicao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id_instituicao"@en.
+:nome_institucao rdfs:domain :Instituicao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "nome_institucao"@en.
+:id_avaliacao rdfs:domain :Avaliacao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id_avaliacao"@en.
+:nota rdfs:domain :Avaliacao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "nota"@en.
+:aprovacao rdfs:domain :Avaliacao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "aprovacao"@en.
+:id_ata rdfs:domain :Ata;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id_ata"@en.
+:data rdfs:domain :Ata;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "data"@en.
+:descricao rdfs:domain :Ata;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "descricao"@en.
+:id_curso rdfs:domain :Curso;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id_curso"@en.
+:nome_curso rdfs:domain :Curso;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "nome _curso"@en.
+:id_publicacao rdfs:domain :Publicacao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "id_publicacao"@en.
+:titulo rdfs:domain :Publicacao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "titulo"@en.
+:ano_publicacao rdfs:domain :Publicacao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "ano_publicacao"@en.
+:status rdfs:domain :Publicacao;
+    rdf:type owl:DatatypeProperty;
+    rdfs:subPropertyOf gufo:hasQualityValue;
+    rdfs:label "status"@en.
+:avalia rdf:type owl:ObjectProperty;
+    rdfs:domain :Avaliador;
+    rdfs:range :Monografia;
+    rdfs:label "avalia"@en;
+    rdf:type gufo:MaterialRelationshipType.
+:orienta rdf:type owl:ObjectProperty;
+    rdfs:domain :Orientador;
+    rdfs:range :Orientando;
+    rdfs:label "orienta"@en.
+:Ata rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Avaliacao
+].
+:Avaliacao rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Ata
+], [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:participatedIn ];
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Monografia
+].
+:Monografia rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:participatedIn;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Avaliacao
+].
+:Avaliacao rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:participatedIn ];
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Banca
+].
+:Banca rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:participatedIn;
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Avaliacao
+].

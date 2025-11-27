@@ -1,13 +1,8 @@
-#Importando classes
-import src.curriculum as curriculum
-import src.publication as publication
-
 import xml.etree.ElementTree as ET
-
 
 class Banca:
 	
-	def __init__(self, id_banca='', ano_banca='', idioma='', natureza='', titulo=''):
+	def __init__(self, id_banca=0, ano_banca='', idioma='', natureza='', titulo=''):
 		self.id_banca = id_banca
 		self.ano_banca = ano_banca
 		self.idioma = idioma
@@ -36,7 +31,8 @@ class Banca:
 		# iterar sobre cada banca encontrada
 		if part_banca is not None:
 			for banca_el in part_banca.findall('PARTICIPACAO-EM-BANCA-DE-GRADUACAO'):
-				seq = banca_el.get('SEQUENCIA-PRODUCAO', '').strip()
+				# seq = banca_el.get('SEQUENCIA-PRODUCAO', '').strip()
+				self.id_banca += 1
 				dados = banca_el.find('DADOS-BASICOS-DA-PARTICIPACAO-EM-BANCA-DE-GRADUACAO')
 				if dados is not None:
 					ano = dados.get('ANO', '').strip()
@@ -48,7 +44,7 @@ class Banca:
 					natureza = ''
 
 				item = {
-					'id_banca': seq,
+					'id_banca': str(self.id_banca),
 					'ano_banca': ano,
 					'idioma': idioma,
 					'natureza': natureza
