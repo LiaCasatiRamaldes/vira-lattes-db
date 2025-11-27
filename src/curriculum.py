@@ -1,9 +1,3 @@
-#Dúvidas: formato a data antes de guardar na classe?
-
-
-#Importando classes
-import src.publication as publication
-
 class Curriculum:	
 	
 	# date_str = None

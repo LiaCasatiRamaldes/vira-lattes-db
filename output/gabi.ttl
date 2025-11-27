@@ -15,13 +15,17 @@
 
 <http://vira-lattes.com#Pesquisador/2175151729086312> a :Avaliador ;
     :atualizacao "2024-07-01" ;
-    :avalia <http://vira-lattes.com#Banca/38>,
-        <http://vira-lattes.com#Banca/39>,
-        <http://vira-lattes.com#Banca/40>,
-        <http://vira-lattes.com#Banca/41> ;
+    :avalia <http://vira-lattes.com#Banca/1>,
+        <http://vira-lattes.com#Banca/2>,
+        <http://vira-lattes.com#Banca/3>,
+        <http://vira-lattes.com#Banca/4> ;
+    :defendeu <http://vira-lattes.com#Monografia/1>,
+        <http://vira-lattes.com#Monografia/2> ;
     :id_lattes "2175151729086312" ;
     :nacionalidade "Brasil"@pt ;
     :nome_pesquisador "Gabriela Martins de Jesus"@pt .
+
+<http://vira-lattes.com#Publicacao/1> a :Monografia .
 
 :ano a owl:DatatypeProperty ;
     rdfs:label "ano"@en ;
@@ -143,25 +147,41 @@
     rdfs:domain :Publicacao ;
     rdfs:subPropertyOf gufo:hasQualityValue .
 
-<http://vira-lattes.com#Banca/38> a :Banca ;
+<http://vira-lattes.com#Banca/1> a :Banca ;
     :ano "2024" ;
     :idioma "Portuguï¿½s"@pt ;
     :natureza "Graduaï¿½ï¿½o"@pt .
 
-<http://vira-lattes.com#Banca/39> a :Banca ;
+<http://vira-lattes.com#Banca/2> a :Banca ;
     :ano "2024" ;
     :idioma "Portuguï¿½s"@pt ;
     :natureza "Graduaï¿½ï¿½o"@pt .
 
-<http://vira-lattes.com#Banca/40> a :Banca ;
+<http://vira-lattes.com#Banca/3> a :Banca ;
     :ano "2024" ;
     :idioma "Portuguï¿½s"@pt ;
     :natureza "Graduaï¿½ï¿½o"@pt .
 
-<http://vira-lattes.com#Banca/41> a :Banca ;
+<http://vira-lattes.com#Banca/4> a :Banca ;
     :ano "2024" ;
     :idioma "Portuguï¿½s"@pt ;
     :natureza "Graduaï¿½ï¿½o"@pt .
+
+<http://vira-lattes.com#Monografia/1> a :Monografia ;
+    :codigo_curso "90000000" ;
+    :codigo_instituicao "039200000000" ;
+    :nome_curso "Sistemas de Informaï¿½ï¿½o"@pt ;
+    :nome_instituicao "Universidade Federal do Espï¿½rito Santo"@pt ;
+    :orientador "Clayton Vieira Fraga Filho"@pt ;
+    :titulo_monografia "Gerï¿½ncia da Qualidade de Produtos de Software na Click Jï¿½nior"@pt .
+
+<http://vira-lattes.com#Monografia/2> a :Monografia ;
+    :codigo_curso "90000005" ;
+    :codigo_instituicao "263300000007" ;
+    :nome_curso "Information Systems"@pt ;
+    :nome_instituicao "DePaul University"@pt ;
+    :orientador ""@pt ;
+    :titulo_monografia ""@pt .
 
 :Orientador a gufo:Role,
         owl:Class,
@@ -193,16 +213,6 @@
     rdfs:label "Instituicao"@en ;
     rdfs:subClassOf gufo:FunctionalComplex .
 
-:Monografia a gufo:SubKind,
-        owl:Class,
-        owl:NamedIndividual ;
-    rdfs:label "Monografia"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass :Avaliacao ;
-            owl:onProperty gufo:participatedIn ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        :Publicacao .
-
 :Ata a gufo:Kind,
         owl:Class,
         owl:NamedIndividual ;
@@ -212,6 +222,16 @@
             owl:onProperty [ owl:inverseOf gufo:inheresIn ] ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
         gufo:IntrinsicMode .
+
+:Monografia a gufo:SubKind,
+        owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Monografia"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass :Avaliacao ;
+            owl:onProperty gufo:participatedIn ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        :Publicacao .
 
 :Orientacao a gufo:Kind,
         owl:Class,
